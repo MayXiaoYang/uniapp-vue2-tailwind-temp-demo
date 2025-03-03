@@ -25,6 +25,11 @@ const config = {
       new UnifiedWebpackPluginV4({
         rem2rpx: true,
         disabled: WeappTailwindcssDisabled,
+        tailwindcssPatcherOptions: {
+          cache: {
+            dir: path.resolve(__dirname, 'node_modules/.cache/tailwindcss'),
+          }
+        }
       }),
     ],
   },
